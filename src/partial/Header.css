@@ -1,0 +1,22 @@
+.bgr-gradient {
+    background-image: linear-gradient(to bottom right, #2375b7, #1096a6);
+    height: 80svh;
+}
+#headerImage{
+    height: 70svh;
+    object-fit: cover;
+}
+.headerMainText{
+    text-indent: -10px;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+}
+.headerSecText , .headerParagraph{
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 1382px) {
+    #headerImage {
+      height: 35svh;
+    }
+  }

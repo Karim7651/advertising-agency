@@ -1,0 +1,12 @@
+.card-img-top {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+}
+.h-card{
+    border-radius: 4px;
+}
+.h-card::after{
+    position: relative;
+    content: "Social Media Reactions";
+}

@@ -1,0 +1,40 @@
+.profileCardContainer{
+    width: 20vw;
+    height: 60svh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #212529;
+    margin: 50px;
+    justify-items: center;
+    border-radius: 10px;
+
+}
+.profileImage{
+    justify-self: center;
+    border-radius: 50%;
+    height: 40%;
+    margin:5% 10%;
+    border: 3px solid black;
+
+}
+.profileCardInfo{
+    justify-self:flex-start;
+    font-size: 1.7vh;
+    padding: 15px;
+}
+.profilehr{
+    border-radius: 4px;
+    color:rgba(0, 0, 0, 0.938);
+}
+.profilehr::after{
+    position: relative;
+    left: 5px;
+    top : 5px;
+    content: "Info";
+}
+@media screen and (max-width : 1100px) {
+    .profileCardInfo{
+        font-size: 1.3vh;
+    }
+    
+}
