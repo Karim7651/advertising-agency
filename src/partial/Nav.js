@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
+import './Nav.css';
 function Nav() {
     const [isVisible, setIsVisible] = useState(true);
 
@@ -29,6 +30,7 @@ function Nav() {
     const componentStyles = {
         position: 'sticky',
         top: '0',
+        zIndex:'999',
         transform: isVisible ? 'translateY(0)' : 'translateY(-100%)',
         transition: 'transform 0.2s ease',
       };

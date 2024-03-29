@@ -1,0 +1,11 @@
+.profileGrid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
+    gap: 0px;
+    justify-items:center;
+}
+@media screen and (max-width:768px) {
+    .profileGrid{
+        grid-template-columns: 1fr;
+    }
+}

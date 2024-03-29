@@ -18,6 +18,9 @@ function Card (props) {
                     <a href={props.facebook} target="_blank" rel="noopener noreferrer">
                         <i className="bi bi-facebook " style={{ fontSize: '2rem', color:'blue'}}></i>
                     </a>
+                    <a href={props.x} target="_blank" rel="noopener noreferrer">
+                        <i className="bi bi-twitter-x " style={{ marginLeft: "10px",fontSize: '2rem', color:'black'}}></i>
+                    </a>
                 </div>
             </div>
         </div>

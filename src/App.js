@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
-import './App.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {

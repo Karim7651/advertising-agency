@@ -3,11 +3,11 @@
     height: 80svh;
 }
 #headerImage{
-    height: 70svh;
-    object-fit: cover;
+    height: 30svw;
+ 
 }
 .headerMainText{
-    text-indent: -10px;
+    text-indent: -15px;
     margin-bottom: 2vh;
     margin-top: 5vh;
 }
@@ -15,8 +15,44 @@
     line-height: 1.5;
     letter-spacing: 1px;
 }
-@media screen and (max-width: 1382px) {
-    #headerImage {
-      height: 35svh;
+.headerMainText{
+    animation-name: headerMainAnimation;
+    animation-duration: 400ms;
+    animation-timing-function: ease-out;
+}
+.headerTextSec{
+    animation-name: headerSecText;
+    animation-duration: 400ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes headerSecText {
+    0%{
+        transform: translateY(100%);
     }
-  }
+    100%{
+        transform: translateY(0%);
+        opacity:1;
+    }
+    
+}
+
+@keyframes headerMainAnimation {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .headerSecText , .headerParagraph{
+        line-height: 1.4;
+        letter-spacing: 0px;
+    }
+    .headerParagraph{
+        padding-bottom: 20px;
+    }
+}

@@ -2,31 +2,31 @@ import React from 'react'
 
 export default function ContactForm() {
   return (
-    <div className="container my-4">
+<div className="container my-4 border border border-1" >
   <div className="row justify-content-center">
     <div className="col-lg-9">
       <h1 className="mb-3">Contact Us</h1>
       <form>
         <div className="row g-3">
           <div className="col-md-6">
-            <label for="your-name" className="form-label">Your Name</label>
-            <input type="text" className="form-control" id="your-name" name="your-name" required/>
+            <label for="name" className="form-label">Name</label>
+            <input type="text" className="form-control border border-black" id="name" name="name" required/>
           </div>
           <div className="col-md-6">
-            <label for="your-surname" className="form-label">Your Surname</label>
-            <input type="text" className="form-control" id="your-surname" name="your-surname" required/>
+            <label for="LastName" className="form-label">Last Name</label>
+            <input type="text" className="form-control border border-black" id="LastName" name="LastName" required/>
           </div>
           <div className="col-md-6">
-            <label for="your-email" className="form-label">Your Email</label>
-            <input type="email" className="form-control" id="your-email" name="your-email" required/>
+            <label for="email" className="form-label">Email</label>
+            <input type="email" className="form-control border border-black" id="email" name="email" required/>
           </div>
           <div className="col-md-6">
-            <label for="your-subject" className="form-label">Your Subject</label>
-            <input type="text" className="form-control" id="your-subject" name="your-subject"/>
+            <label for="subject" className="form-label">Subject</label>
+            <input type="text" className="form-control border border-black" id="subject" name="subject"/>
           </div>
           <div className="col-12">
-            <label for="your-message" className="form-label">Your Message</label>
-            <textarea className="form-control" id="your-message" name="your-message" rows="19" required></textarea>
+            <label for="message" className="form-label">Message</label>
+            <textarea className="form-control border border-danger-subtle" id="message" name="message" rows="19" required></textarea>
           </div>
           <div className="col-12">
             <div className="row">

@@ -2,7 +2,7 @@ import React from "react";
 import './Profile.css'
 function Profile(props) {
     return ( 
-        <div className="profileCardContainer shadow">
+        <div className="profileCardContainer shadow border border-dark">
             <img src={props.image} className="profileImage" alt="staff name"/>
             <hr class="profilehr"/>
             <div className="profileCardInfo">
