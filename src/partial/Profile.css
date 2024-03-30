@@ -7,7 +7,7 @@
     margin: 50px;
     justify-items: center;
     border-radius: 10px;
-
+    transition: transform 0.2s ease;
 }
 .profileImage{
     align-self: center;
@@ -29,7 +29,6 @@
 .profilehr::after{
     position: relative;
     left: 5px;
-    top : 5px;
     content: "Info";
 }
 @media screen and (max-width : 1100px) {

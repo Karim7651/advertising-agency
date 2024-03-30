@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
 import "bootstrap-icons/font/bootstrap-icons.css";
+import './App.css'
 
 function App() {
   return (

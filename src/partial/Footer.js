@@ -5,14 +5,14 @@ function Footer() {
   return (
     <footer className="footerContainer">
       <div className="footerSocial">
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <i className="bi bi-facebook circle-icon "></i>
         </a>
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <i className="bi bi-instagram circle-icon"></i>
         </a>
-        <a href="" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-twitter circle-icon" ></i>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-twitter-x circle-icon" ></i>
         </a>
       </div>
       <div className="footerNav">
@@ -26,12 +26,13 @@ function Footer() {
           <li>
             <Link to='/contact' className='nav-link'>Contact Us</Link>
           </li>
+          <div className="footerCopyRights">
+          <p>{"Copyright ©" + new Date().getFullYear() + " Brandname ads"}</p>
+          </div>
         </ul>
 
       </div>
-      <div className="footerCopyRights">
-      {"Copyright ©" + new Date().getFullYear() + " Brandname ads"}
-      </div>
+      
     </footer>
   );
 }
