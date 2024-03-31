@@ -1,10 +1,13 @@
 import React from 'react';
 import './Header.css'
 import headerImage from '../assets/header.png'
+import { useTheme } from '../ThemeContext';
 function Header() {
+  const darkTheme = useTheme()
   return (
     <header>
-    <div className="bgr-gradient">
+      
+    <div className={`${darkTheme ? "bgr-gradient":"bgr-gradientLight"}`}>
       <div className="row justify-content-center text-white">
         <div className="col-3 offset-1 mt-5 pt-5" id="here" >
           <h1 className ="headerMainText">BrandName Ads</h1>

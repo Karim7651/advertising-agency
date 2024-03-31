@@ -6,16 +6,19 @@ import About from './components/About';
 import ContactUs from './components/ContactUs';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import './App.css'
+import { ThemeProvider } from './ThemeContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/contact" element={<ContactUs/>} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/contact" element={<ContactUs/>} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

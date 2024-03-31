@@ -1,8 +1,10 @@
 import React from 'react';
 import './Card.css'
+import {useTheme,useThemeUpdate} from '../ThemeContext'
 function Card (props) {
+    const darkTheme = useTheme()
     return (
-        <div className="card col-lg-4 col-sm-12 m-auto w-100 shadow " >
+        <div className={`card col-lg-4 col-sm-12 m-auto w-100 shadow  ${darkTheme ? 'text-bg-dark': 'text-bg-light'}`} >
             <img src={props.image} className="card-img-top" alt={props.imageDesc}/>
             <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>

@@ -1,10 +1,18 @@
 .bgr-gradient {
+    padding-top: 5svh;
+    background-color: #051622;
+    background-attachment: scroll;
+    border-bottom: #0a283d 2px solid;
+    height: 80svh;
+}
+.bgr-gradientLight{
+    padding-top: 5svh;
     background-image: linear-gradient(to bottom right, #2375b7, #1096a6);
     height: 80svh;
 }
 #headerImage{
+    padding:20px;
     height: 30svw;
- 
 }
 .headerMainText{
     text-indent: -15px;

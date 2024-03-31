@@ -3,9 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import './Nav.css';
+import ThemeButton from './ThemeButton';
+import {useTheme,useThemeUpdate} from '../ThemeContext'
 function Nav() {
-    const [isVisible, setIsVisible] = useState(true);
+    const darkTheme = useTheme()
+    const toggleTheme = useThemeUpdate()
 
+    const [isVisible, setIsVisible] = useState(true);
     useEffect(() => {
       let lastScrollY = window.scrollY;
   
@@ -32,10 +36,12 @@ function Nav() {
         top: '0',
         zIndex:'999',
         transform: isVisible ? 'translateY(0)' : 'translateY(-100%)',
-        transition: 'transform 0.2s ease',
+        transition: 'transform 0.3s ease',
+        backgroundColor: darkTheme ? "#212529" : "#f5f5f4"
       };
   return (
-    <nav className='navbar navbar-expand-md navbar-dark bg-dark' style={componentStyles}>
+    //base classes then the conditional ones using string literals
+    <nav className={`navbar navbar-expand-md ${darkTheme ? 'navbar-dark bg-dark': 'navbar-light bg-light'}`}  style={componentStyles}>
         <div className ='container' >
             <a href='#' className='navbar-brand'>Brand</a>
             <button className='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#nav' aria-controls='nav' aria-label='Expand Navigation'>
@@ -52,12 +58,12 @@ function Nav() {
                     <li className='nav-item'>
                         <Link to='/contact' className='nav-link'>Contact Us</Link>
                     </li>
-
+                    <li>
+                      <ThemeButton switch={toggleTheme} state={darkTheme}/>
+                    </li>
                 </ul>
             </div>
-
         </div>
-
     </nav>
   );
 }

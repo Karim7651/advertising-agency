@@ -1,10 +1,12 @@
 import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
+import { useTheme,useThemeUpdate } from '../ThemeContext';
 function Footer() {
+  const darkTheme = useTheme()
   return (
-    <footer className="footerContainer">
-      <div className="footerSocial">
+    <footer className={`${darkTheme?'footerContainer':'footerContainerLight'}`} >
+      <div className={`${darkTheme?'footerSocial':'footerSocialLight'}`}>
         <a href="#" target="_blank" rel="noopener noreferrer">
           <i className="bi bi-facebook circle-icon "></i>
         </a>
@@ -15,7 +17,7 @@ function Footer() {
           <i className="bi bi-twitter-x circle-icon" ></i>
         </a>
       </div>
-      <div className="footerNav">
+      <div className={`${darkTheme?'footerNav':'footerNavLight'}`}>
         <ul>
           <li>
             <Link to='/' className='nav-link active'>Home</Link>
@@ -26,7 +28,7 @@ function Footer() {
           <li>
             <Link to='/contact' className='nav-link'>Contact Us</Link>
           </li>
-          <div className="footerCopyRights">
+          <div className={`${darkTheme?'footerCopyRights':'footerCopyRightsLight'}`}>
           <p>{"Copyright ©" + new Date().getFullYear() + " Brandname ads"}</p>
           </div>
         </ul>
