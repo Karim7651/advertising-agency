@@ -1,9 +1,8 @@
-.profileGrid{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(500px, 4fr));
-    row-gap: 5px;
-    column-gap: 10px;
-    justify-items:center;
+.profileFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 @media screen and (max-width:768px) {
     .profileGrid{

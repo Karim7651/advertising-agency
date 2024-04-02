@@ -52,9 +52,9 @@ function Home() {
     <>
       <Nav />
       <Header/>
-      <div style={{backgroundColor : darkTheme? "#051622" : "#ffffff" , backgroundImage : darkTheme ? `url(${background})` :  ""  , backgroundAttachment:"fixed" ,backgroundSize:"cover",backgroundPosition:"center" ,  }}>
+      <div style={{backgroundColor : darkTheme? "#051622" : "#ffffff" , backgroundImage : darkTheme ? `url(${background})` :  ""  , backgroundAttachment:"fixed" ,backgroundSize:"cover",backgroundPosition:"center"   }}>
       <div className="container py-5 " >
-        <HomeMainText/>
+        <HomeMainText main={"Available to businesses of all sizes"} sec={"And accessible to marketers of every level of expertise. BrandName Ads provides ad solutions that help your business connect with customers at every stage of their journey."}/>
 
         <div className="row">
           {cardsData.map((card, index) => (

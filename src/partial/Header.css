@@ -1,8 +1,10 @@
+
 .bgr-gradient {
     padding-top: 5svh;
     background: linear-gradient(to right, #12171b, #2e2e2e);
     background-attachment: scroll;
     height: 60svh;
+    border-bottom: 5px #171c1f solid;
     
 }
 .bgr-gradientLight{

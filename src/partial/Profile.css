@@ -1,28 +1,60 @@
 .profileCardContainer{
-    width: 30vw;
-    height: 55svh;
+    width: 22vw;
     display: flex;
     flex-direction: column;
-    border: 1px solid #212529;
+    margin: 50px;
+    justify-items: center;
+    border: 1px #ffffff solid;
+    border-radius: 10px;
+    background-color: #212529;
+    animation-duration: 500ms;
+    animation-name: profileCard;
+    animation-timing-function: ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+.profileCardContainerLight{
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
     margin: 50px;
     justify-items: center;
     border-radius: 10px;
-    transition: transform 0.2s ease;
+    background-color: #ffffff;
+    animation-duration: 500ms;
+    animation-name: profileCard;
+    animation-timing-function: ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 .profileImage{
     align-self: center;
     border-radius: 50%;
-    width: 40%;
-    margin:5% 10%;
-    border: 3px solid black;
+    width: 35%;
+    margin:5% ;
+    border: 3px solid rgb(0, 0, 0);
 
 }
 .profileCardInfo{
     justify-self:flex-start;
-    font-size: 1.7vh;
+    font-size: 1em;
+    line-height: 1.5;
     padding: 15px;
+    color: white;
+    text-overflow: ellipsis;
 }
+.profileCardInfoLight{
+    justify-self:flex-start;
+    font-size: 0.95em;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
 .profilehr{
+    border-radius: 4px;
+    color:rgba(255, 255, 255, 0.938) !important;
+}
+.profilehrLight{
     border-radius: 4px;
     color:rgba(0, 0, 0, 0.938);
 }
@@ -31,9 +63,19 @@
     left: 5px;
     content: "Info";
 }
-@media screen and (max-width : 1100px) {
-    .profileCardInfo{
-        font-size: 1.3vh;
-    }
+.profilehrLight::after{
+    position: relative;
+    left: 5px;
+    content: "Info";
+}
     
+@keyframes profileCard {
+    0%{
+        transform: translateY(30%);
+        opacity: 0.1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
