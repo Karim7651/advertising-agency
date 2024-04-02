@@ -1,0 +1,22 @@
+hr.rounded {
+    border-top: 10px solid #bbb;
+    border-radius: 5px;
+    border-color: #ffffff;
+    opacity: 1;
+    width: 3svw;
+}
+hr.roundedLight {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+    border-color: #5369fc;
+    opacity: 1;
+    width: 3svw;
+}
+.HomeMainText > h1,.HomeMainText > h5{
+    color: white;
+    
+}
+.HomeMainTextLight > h1, .HomeMainTextLight > h5{
+    color:black;
+
+}

@@ -1,27 +1,29 @@
 .bgr-gradient {
     padding-top: 5svh;
-    background-color: #051622;
+    background: linear-gradient(to right, #12171b, #2e2e2e);
     background-attachment: scroll;
-    border-bottom: #0a283d 2px solid;
-    height: 80svh;
+    height: 60svh;
+    
 }
 .bgr-gradientLight{
     padding-top: 5svh;
-    background-image: linear-gradient(to bottom right, #2375b7, #1096a6);
-    height: 80svh;
+    background: linear-gradient(to right, #5862ff, #31cddb);
+    height: 60svh;
+    border-bottom-right-radius: 100px;
 }
 #headerImage{
-    padding:20px;
-    height: 30svw;
+    margin-left: 175px;
+    min-height: 20svw;
+    height: 25svw;
+
 }
 .headerMainText{
     text-indent: -15px;
     margin-bottom: 2vh;
-    margin-top: 5vh;
 }
 .headerSecText , .headerParagraph{
-    line-height: 1.5;
-    letter-spacing: 1px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
 }
 .headerMainText{
     animation-name: headerMainAnimation;
@@ -55,10 +57,10 @@
     }
     
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
     .headerSecText , .headerParagraph{
-        line-height: 1.4;
-        letter-spacing: 0px;
+        line-height: 1.1;
+        letter-spacing: 0.1px;
     }
     .headerParagraph{
         padding-bottom: 20px;

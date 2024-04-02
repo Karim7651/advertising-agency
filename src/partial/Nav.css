@@ -1,3 +1,9 @@
+.navbar-light , .bg-light{
+    background-color:#232f3e!important;
+}
+.navbar-brand a , .bg-light a {
+    color: aliceblue !important;
+}
 nav li{
     overflow-y: hidden;
     padding:0px 10px;

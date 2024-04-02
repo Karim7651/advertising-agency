@@ -6,6 +6,7 @@ import Header from'../partial/Header'
 import Footer from'../partial/Footer'
 import {useTheme,useThemeUpdate} from '../ThemeContext'
 import background from '../assets/blank-black-plain-pattern-gray.jpg'
+import HomeMainText from '../partial/HomeMainText';
 
 function Home() {
   const darkTheme = useTheme()
@@ -51,8 +52,10 @@ function Home() {
     <>
       <Nav />
       <Header/>
-      <div style={{backgroundColor : darkTheme? "#051622" : "#ffffff" , backgroundImage : darkTheme ? `url(${background})` :  "url('light-theme-background-image-url')"  , backgroundAttachment:"fixed" , backgroundSize :"contain"  ,backgroundRepeat:"repeat-x"}}>
+      <div style={{backgroundColor : darkTheme? "#051622" : "#ffffff" , backgroundImage : darkTheme ? `url(${background})` :  ""  , backgroundAttachment:"fixed" ,backgroundSize:"cover",backgroundPosition:"center" ,  }}>
       <div className="container py-5 " >
+        <HomeMainText/>
+
         <div className="row">
           {cardsData.map((card, index) => (
             <div className="col-md-6 col-sm-12 my-5 mx-au to" key={index}>

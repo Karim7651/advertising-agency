@@ -41,7 +41,7 @@ function Nav() {
       };
   return (
     //base classes then the conditional ones using string literals
-    <nav className={`navbar navbar-expand-md ${darkTheme ? 'navbar-dark bg-dark': 'navbar-light bg-light'}`}  style={componentStyles}>
+    <nav className={`navbar navbar-expand-md ${darkTheme ? 'navbar-dark bg-dark': 'navbar-light bg-light'}`} id="LIGHTNAV"  style={componentStyles}>
         <div className ='container' >
             <a href='#' className='navbar-brand'>Brand</a>
             <button className='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#nav' aria-controls='nav' aria-label='Expand Navigation'>

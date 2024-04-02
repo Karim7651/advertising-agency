@@ -10,7 +10,7 @@ function Card (props) {
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">{props.text}</p>
                 <div className="row justify-content center">
-                    <hr class="h-card"/>
+                    <hr className="h-card"/>
                 </div>
                 <div className="social-icons">
                     <a href={props.instagram} target="_blank" rel="noopener noreferrer">
