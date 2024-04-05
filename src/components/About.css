@@ -4,8 +4,3 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-@media screen and (max-width:768px) {
-    .profileGrid{
-        grid-template-columns: 1fr;
-    }
-}

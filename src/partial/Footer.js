@@ -28,11 +28,10 @@ function Footer() {
           <li>
             <Link to='/contact' className='nav-link'>Contact Us</Link>
           </li>
-          <div className={`${darkTheme?'footerCopyRights':'footerCopyRightsLight'}`}>
-          <p>{"Copyright ©" + new Date().getFullYear() + " Brandname ads"}</p>
-          </div>
         </ul>
-
+      </div>
+      <div className={`${darkTheme?'footerCopyRights':'footerCopyRightsLight'}`}>
+      <p>{"Copyright ©" + new Date().getFullYear() + " Brandname ads"}</p>
       </div>
       
     </footer>
