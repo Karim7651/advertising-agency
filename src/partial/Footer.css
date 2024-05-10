@@ -26,13 +26,11 @@
     margin-left: auto;
     text-align: right;
     color: white;
-    padding-top: 10px;
 }
 .footerCopyRightsLight{
     margin-left: auto;
     text-align: right;
     color: rgb(255, 255, 255);
-    padding-top: 10px;
 }
 
 .footerCopyRights p {
@@ -51,14 +49,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 10px;
 }
 .footerNavLight ul{
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-bottom: 10px;
 }
 .footerNav ul li {
     display: inline;
