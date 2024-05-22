@@ -5,6 +5,9 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const sgMail = require('@sendgrid/mail'); // Add SendGrid library
+require('dotenv').config(); // Load environment variables
+
 const port = 3001;
 const app = express();
 
@@ -57,6 +60,8 @@ app.post('/main', upload.single('image'), (req, res) => {
 
     main.save()
         .then((result) => {
+            // Send email notification using SendGrid
+            sendEmailNotification(result);
             res.status(201).json(result);
         })
         .catch((err) => {
@@ -67,6 +72,23 @@ app.post('/main', upload.single('image'), (req, res) => {
             }
         });
 });
+
+// Function to send email notification using SendGrid
+const sendEmailNotification = (data) => {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY); // Set SendGrid API key
+
+    const msg = {
+        to: 'recipient-email@example.com', // Change to your recipient email
+        from: 'your-email@example.com', // Change to your verified sender email
+        subject: 'New Main Entry Added',
+        text: `A new entry has been added:\nTitle: ${data.Title}\nDescription: ${data.Description}`
+    };
+
+    sgMail
+        .send(msg)
+        .then(() => console.log('Email notification sent successfully'))
+        .catch((error) => console.error('Error sending email notification:', error));
+};
 
 // GET endpoint to retrieve all entries
 app.get('/main', (req, res) => {
