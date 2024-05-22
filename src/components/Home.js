@@ -22,6 +22,7 @@ function Home() {
       })
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+
   return (
     <>
       <Nav />
@@ -39,7 +40,14 @@ function Home() {
           <div className="row">
             {cardsData.map((card, index) => (
               <div className="col-md-6 col-sm-12 my-5 mx-auto" key={index}>
-                <Card title={card.Title} text={card.Description} facebook={card.facebook} instagram={card.instagram} x={card.x} />
+                <Card 
+                  title={card.Title} 
+                  image={`http://localhost:3001/uploads/${card.Image}`} 
+                  text={card.Description} 
+                  facebook={card.Facebook} 
+                  instagram={card.Instagram} 
+                  x={card.X} 
+                />
               </div>
             ))}
           </div>
