@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const Main = require("./Models/Main");
+const cors = require('cors');
 const port = 3001;
 const app = express();
 
@@ -14,6 +15,7 @@ mongoose.connect(connectionString)
         console.error("Failed to connect to MongoDB", err);
     });
 
+app.use(cors());
 // Middleware to parse URL-encoded data and JSON data
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
